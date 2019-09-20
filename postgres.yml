@@ -9,7 +9,9 @@
 
   gather_facts: true
   tasks:
-      - copy: content="{{ hello }}" dest=/tmp/hello.txt
+      - copy:
+          content: "{{ hello }}"
+          dest: "/tmp/hello.txt"
 #  roles:
 #      - postgres
   become: true
