@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   vars_files:
     - vars/main.yml
   vars:
@@ -11,7 +11,7 @@
   tasks:
       - copy:
           content: "hello"
-          dest: "/tmp/hello.txt"
+          dest: "~/hello.txt"
 #  roles:
 #      - postgres
   become: true
