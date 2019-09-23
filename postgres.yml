@@ -5,12 +5,12 @@
   vars:
 #      ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
 #      postgres_user: "{{ morpheus['customOptions']['pgsql_username'] }}"   
-       hello: "{{ morpheus['instance']['metadata']['folderName'] }}"
+#      hello: "{{ morpheus['instance']['metadata']['folderName'] }}"
 
   gather_facts: true
   tasks:
       - copy:
-          content: "{{ hello }}"
+          content: "hello"
           dest: "/tmp/hello.txt"
 #  roles:
 #      - postgres
