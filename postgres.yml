@@ -1,17 +1,23 @@
 ---
 - hosts: localhost
-#  vars_files:
-#    - vars/main.yml
-#  vars:
-#      ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
-#      postgres_user: "{{ morpheus['customOptions']['pgsql_username'] }}"   
+  vars_files:
+    - vars/main.yml
+  vars:
+      ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
+      postgres_user: "{{ morpheus['customOptions']['pgsql_username'] }}"   
 #      hello: "{{ morpheus['instance']['metadata']['folderName'] }}"
 
-#  gather_facts: true
+  gather_facts: true
+#  tasks:
+#      - copy:
+#          content: "hello"
+#          dest: "~/hello.txt"
+  roles:
+      - postgres
+  become: true
+
+- hosts: localhost
   tasks:
       - copy:
           content: "hello"
           dest: "~/hello.txt"
-#  roles:
-#      - postgres
-#  become: true
