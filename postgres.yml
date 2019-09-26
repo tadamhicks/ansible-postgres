@@ -12,7 +12,7 @@
 #      - postgres
 #  become: true
 
-- hosts: localhost
+- hosts: all
   tasks:
       - pause: minutes=1
       - copy:
