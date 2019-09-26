@@ -20,4 +20,4 @@
   tasks:
       - copy:
           content: "{{ morpheus['container']['externalIp'] }}"
-          dest: "~/hello.txt"
+          dest: "/tmp/hello.txt"
