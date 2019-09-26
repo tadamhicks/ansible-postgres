@@ -18,6 +18,7 @@
 
 - hosts: all
   tasks:
+      - pause: minutes=1
       - copy:
           content: "{{ morpheus['container']['externalIp'] }}"
           dest: "/tmp/hello.txt"
