@@ -16,7 +16,7 @@
 #      - postgres
 #  become: true
 
-- hosts: localhost
+- hosts: all
   tasks:
       - copy:
           content: "{{ morpheus['container']['externalIp'] }}"
