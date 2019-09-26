@@ -19,5 +19,5 @@
 - hosts: localhost
   tasks:
       - copy:
-          content: "hello"
+          content: "{{ morpheus['instance']['metadata']['hello'] }}"
           dest: "~/hello.txt"
