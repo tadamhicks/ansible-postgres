@@ -1,5 +1,5 @@
 ---
-- hosts: databases
+- hosts: all
   vars_files:
     - vars/main.yml
   vars:
