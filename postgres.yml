@@ -2,20 +2,7 @@
 - hosts: all
   vars_files:
     - vars/main.yml
-  vars:
-      # ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
-      postgres_user: "{{ morpheus['customOptions']['pgsql_username'] }}"   
-      hello: "{{ morpheus['instance']['metadata']['folderName'] }}"
-
   gather_facts: true
   roles:
       - postgres
   become: true
-
-#- hosts: all
-#  tasks:
-#      - pause: minutes=1
-#      - copy:
-#          content: "{{ morpheus['container']['externalIp'] }}"
-#          content: "hello"
-#          dest: "/tmp/hello.txt"
