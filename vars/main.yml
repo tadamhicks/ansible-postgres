@@ -3,4 +3,4 @@ postgresql_databases:
 postgresql_users:
   - name: "{{ morpheus['customOptions']['pgsql_username'] }}" 
     password: "{{ morpheus['customOptions']['pgsql_password'] }}" 
-ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
+#ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
