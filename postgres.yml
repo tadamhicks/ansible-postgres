@@ -3,7 +3,7 @@
   vars_files:
     - vars/main.yml
   vars:
-      ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
+      # ansible_become_password: "{{ lookup('cypher','secret=password/becomepass') }}"
       postgres_user: "{{ morpheus['customOptions']['pgsql_username'] }}"   
       hello: "{{ morpheus['instance']['metadata']['folderName'] }}"
 
